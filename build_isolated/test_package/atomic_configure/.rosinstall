@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/ros_ws/devel_isolated/test_package/setup.sh
