@@ -1,8 +1,0 @@
-prefix=/home/pi/ros_ws/devel
-
-Name: my_msgs
-Description: Description of my_msgs
-Version: 0.0.0
-Cflags: -I/home/pi/ros_ws/devel/include -I/home/pi/ros_ws/src/my_msgs/include
-Libs: -L${prefix}/lib -lmy_msgs
-Requires: roscpp rospy message_runtime std_msgs

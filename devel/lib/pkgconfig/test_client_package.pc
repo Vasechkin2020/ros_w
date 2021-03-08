@@ -1,8 +1,0 @@
-prefix=/home/pi/ros_ws/devel
-
-Name: test_client_package
-Description: Description of test_client_package
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
