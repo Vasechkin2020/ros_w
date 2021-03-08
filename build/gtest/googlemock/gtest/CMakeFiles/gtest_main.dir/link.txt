@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgtest_maind.so -o libgtest_maind.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -Wl,-rpath,/home/pi/ros_ws/build/gtest/googlemock/gtest libgtestd.so -pthread 

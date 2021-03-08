@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgmock_maind.so -o libgmock_maind.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -Wl,-rpath,/home/pi/ros_ws/build/gtest/googlemock:/home/pi/ros_ws/build/gtest/googlemock/gtest libgmockd.so gtest/libgtestd.so -pthread 

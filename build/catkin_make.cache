@@ -1,2 +1,0 @@
-my_msgs:test_client_package:test_package:test_publisher:test_service:test_service_package:test_subscriber
--DCATKIN_DEVEL_PREFIX=/home/pi/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/ros_ws/install -G Unix Makefiles
