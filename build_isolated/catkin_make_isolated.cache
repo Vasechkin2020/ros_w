@@ -1,2 +1,0 @@
-test_package:test_publisher
--G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/pi/ros_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/pi/ros_ws/install_isolated

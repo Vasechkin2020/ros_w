@@ -6,46 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/ros_ws/src/test_client_package/../../devel/include/test_service/example_service.h
-ros/service_traits.h
--
-test_service/example_serviceRequest.h
--
-test_service/example_serviceResponse.h
--
-
-/home/pi/ros_ws/src/test_client_package/../../devel/include/test_service/example_serviceRequest.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/pi/ros_ws/src/test_client_package/../../devel/include/test_service/example_serviceResponse.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
 /home/pi/ros_ws/src/test_client_package/src/test_client_package_node.cpp
 ros/ros.h
 -
@@ -260,10 +220,6 @@ boost/make_shared.hpp
 cstddef
 -
 memory
--
-
-/opt/ros/melodic/include/ros/message_operations.h
-ostream
 -
 
 /opt/ros/melodic/include/ros/message_traits.h

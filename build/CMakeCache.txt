@@ -439,14 +439,17 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
-//The directory containing a CMake configuration file for massage_generation.
-massage_generation_DIR:PATH=massage_generation_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//Value Computed by CMake
+my_msgs_BINARY_DIR:STATIC=/home/pi/ros_ws/build/my_msgs
+
+//Value Computed by CMake
+my_msgs_SOURCE_DIR:STATIC=/home/pi/ros_ws/src/my_msgs
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -483,12 +486,6 @@ test_package_BINARY_DIR:STATIC=/home/pi/ros_ws/build/test_package
 
 //Value Computed by CMake
 test_package_SOURCE_DIR:STATIC=/home/pi/ros_ws/src/test_package
-
-//Value Computed by CMake
-test_packege_BINARY_DIR:STATIC=/home/pi/ros_ws/build/test_packege
-
-//Value Computed by CMake
-test_packege_SOURCE_DIR:STATIC=/home/pi/ros_ws/src/test_packege
 
 //Value Computed by CMake
 test_publisher_BINARY_DIR:STATIC=/home/pi/ros_ws/build/test_publisher
@@ -661,7 +658,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

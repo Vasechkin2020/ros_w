@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -123,6 +113,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test_service/CMakeFiles/test_service_geneus.dir/rule:
+	cd /home/pi/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test_service/CMakeFiles/test_service_geneus.dir/rule
+.PHONY : test_service/CMakeFiles/test_service_geneus.dir/rule
+
+# Convenience name for target.
+test_service_geneus: test_service/CMakeFiles/test_service_geneus.dir/rule
+
+.PHONY : test_service_geneus
+
+# fast build rule for target.
+test_service_geneus/fast:
+	cd /home/pi/ros_ws/build && $(MAKE) -f test_service/CMakeFiles/test_service_geneus.dir/build.make test_service/CMakeFiles/test_service_geneus.dir/build
+.PHONY : test_service_geneus/fast
+
+# Convenience name for target.
 test_service/CMakeFiles/test_service_generate_messages_eus.dir/rule:
 	cd /home/pi/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test_service/CMakeFiles/test_service_generate_messages_eus.dir/rule
 .PHONY : test_service/CMakeFiles/test_service_generate_messages_eus.dir/rule
@@ -198,21 +213,6 @@ test_service_gennodejs/fast:
 .PHONY : test_service_gennodejs/fast
 
 # Convenience name for target.
-test_service/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/pi/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test_service/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : test_service/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: test_service/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/pi/ros_ws/build && $(MAKE) -f test_service/CMakeFiles/_catkin_empty_exported_target.dir/build.make test_service/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
 test_service/CMakeFiles/test_service_gencpp.dir/rule:
 	cd /home/pi/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test_service/CMakeFiles/test_service_gencpp.dir/rule
 .PHONY : test_service/CMakeFiles/test_service_gencpp.dir/rule
@@ -241,21 +241,6 @@ test_service_generate_messages: test_service/CMakeFiles/test_service_generate_me
 test_service_generate_messages/fast:
 	cd /home/pi/ros_ws/build && $(MAKE) -f test_service/CMakeFiles/test_service_generate_messages.dir/build.make test_service/CMakeFiles/test_service_generate_messages.dir/build
 .PHONY : test_service_generate_messages/fast
-
-# Convenience name for target.
-test_service/CMakeFiles/test_service_geneus.dir/rule:
-	cd /home/pi/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test_service/CMakeFiles/test_service_geneus.dir/rule
-.PHONY : test_service/CMakeFiles/test_service_geneus.dir/rule
-
-# Convenience name for target.
-test_service_geneus: test_service/CMakeFiles/test_service_geneus.dir/rule
-
-.PHONY : test_service_geneus
-
-# fast build rule for target.
-test_service_geneus/fast:
-	cd /home/pi/ros_ws/build && $(MAKE) -f test_service/CMakeFiles/test_service_geneus.dir/build.make test_service/CMakeFiles/test_service_geneus.dir/build
-.PHONY : test_service_geneus/fast
 
 # Convenience name for target.
 test_service/CMakeFiles/test_service_generate_messages_lisp.dir/rule:
@@ -370,14 +355,12 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... test_service_generate_messages_eus"
-	@echo "... test_service_gennodejs"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... test_service_gencpp"
-	@echo "... test_service_generate_messages"
 	@echo "... test_service_geneus"
 	@echo "... edit_cache"
+	@echo "... test_service_generate_messages_eus"
+	@echo "... test_service_gennodejs"
+	@echo "... test_service_gencpp"
+	@echo "... test_service_generate_messages"
 	@echo "... test_service_generate_messages_lisp"
 	@echo "... test_service_generate_messages_cpp"
 	@echo "... _test_service_generate_messages_check_deps_example_service"
@@ -387,6 +370,7 @@ help:
 	@echo "... test_service_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... test_service_generate_messages_py"
+	@echo "... list_install_components"
 	@echo "... test"
 .PHONY : help
 
