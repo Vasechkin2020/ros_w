@@ -16,3 +16,5 @@ float32 odom
 int32 napravlen
 float32 distance_lazer
 float32 distance_uzi
+
+
